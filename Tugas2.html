@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Kamar dan Fasilitas</title>
+    <link rel="stylesheet" href="Tugas2.css">
+</head>
+<body id="body">
+    <div>
+        <header><h1 class="h1_dataKamar">Data Kamar</h1></header>
+        <table border="0" align="center">
+            <tr>
+                <td ><label for="inputId">Id :</label></td>
+                <td><input type="number" name="idKamar" placeholder="Masukkan Id Kamar" 
+                    style="width: 1000px;"></td>
+            </tr>
+            <tr>
+                <td><label for="inputNama">Nama :</label></td>
+                <td><input type="text" name="nama" placeholder="Masukkan Nama Pemesan"
+                    style="width: 1000px;"></td>
+            </tr>
+            <tr>
+                <td ><label for="inputGambar">Gambar Ruangan :</label></td>
+                <td>
+                    <img src="Gambar/ruangTamu1.jpg" name="ruangTamu1" title="Ruang Tamu 1">
+                    <img src="Gambar/ruangTamu2.jpg" name="ruangTamu2" title="Ruang Tamu 2">
+                    <img src="Gambar/ruangTamu3.jpg" name="ruangTamu3" title="Ruang Tamu 3">
+                    <img src="Gambar/ruangTamu4.jpg" name="ruangTamu4" title="Ruang Tamu 4">
+                    <img src="Gambar/ruangTamu5.jpg" name="ruangTamu5" title="Ruang Tamu 5">
+                </td> 
+            </tr>
+            <tr>
+                <td ><label for="inputJenisKamar">Jenis Kamar :</label></td>
+                <td>
+                    <select name="jenisKamar" id="jenisKamar">
+                        <option value="pilih" selected>--PILIH--</option>
+                        <option value="clasic">CLASIC</option>
+                        <option value="minimalis">MINIMALIS</option>
+                        <option value="vip">VIP</option>
+                        <option value="vvip">VVIP</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <header><h1 class="h1_Fasilitas">Fasilitas</h1></header>
+        <table border="0" align="center">
+            <tr>
+                <td><label for="inputFasilitas">Fasilitas :</label></td>
+                <td>
+                    <input type="checkbox" name="fasilitas"> Cemilan
+                    <input type="checkbox" name="fasilitas"> Handuk
+                    <input type="checkbox" name="fasilitas"> Wifi
+                    <input type="checkbox" name="fasilitas"> PS 5
+                    <input type="checkbox" name="fasilitas"> Motor Listrik
+                    <input type="checkbox" name="fasilitas"> Kolam Renang
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label class="label1" for="inputHarga">Harga Weekend :</label>
+                        <select name="hargaWeekend" id="hargaWeekend">
+                            <option value="pilih" align="center" >--- PILIH ---</option>
+                            <option value="ruangan1">RUANGAN 1: Rp3.500.000,00</option>
+                            <option value="ruangan2">RUANGAN 2: Rp4.000.000,00</option>
+                            <option value="ruangan3">RUANGAN 3: Rp4.500.000,00</option>
+                            <option value="ruangan4">RUANGAN 4: Rp5.000.000,00</option>
+                            <option value="ruangan5">RUANGAN 5: Rp5.500.000,00</option>
+                        </select>
+                    <label class="label2" for="inputHarga">Harga Weekday :</label>
+                        <select name="hargaWeekend" id="hargaWeekend">
+                            <option value="pilih" align="center" >--- PILIH ---</option>
+                            <option value="ruangan1">RUANGAN 1: Rp3.000.000,00</option>
+                            <option value="ruangan2">RUANGAN 2: Rp3.500.000,00</option>
+                            <option value="ruangan3">RUANGAN 3: Rp4.000.000,00</option>
+                            <option value="ruangan4">RUANGAN 4: Rp4.500.000,00</option>
+                            <option value="ruangan5">RUANGAN 5: Rp5.000.000,00</option>
+                        </select>
+                </td> 
+            </tr>
+            <tr>
+                <td><label for="inputKuota">Kuota :</label></td>
+                <td>
+                    <input type="radio" name="kuota">Ruangan 1 Tidak Tersedia (Jangan Dipilih) <br>
+                    <input type="radio" name="kuota">Ruangan 2 Tidak Tersedia (Jangan Dipilih) <br>
+                    <input type="radio" name="kuota">Ruangan 3 Tersedia (Bisa Dipilih) <br>
+                    <input type="radio" name="kuota">Ruangan 4 Tersedia (Bisa Dipilih) <br>
+                    <input type="radio" name="kuota">Ruangan 5 Tersedia (Bisa Dipilih) <br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="inputJamBuka">Jam Buka :</label></td>
+                <td><input type="time"> Jam Buka Sekitar Jam 07.00 - 20.00 WIB</td>
+            </tr>
+            <tr>
+                <td><label for="inputJamTutup">Jam Tutup :</label></td>
+                <td><input type="time"> Jam Tutup Sekitar Jam 20.00 - Selesai</td>
+            </tr>
+            <tr>
+                <td><label for="deskripsi">Deskripsi :</label></td>
+                <td><textarea name="deskripsi" id="deskripsi" style="width: 1000px;"></textarea>></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button class="input">INPUT</button>
+                    <button class="batal">BATAL</button>
+                </td>
+            </tr>
+        </table><br>
+    </div>
+    <script src="Tugas2.js"></script>
+</body>
+</html>

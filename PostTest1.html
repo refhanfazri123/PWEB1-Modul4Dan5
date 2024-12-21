@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perhitungan Gaji</title>
+    <script>
+        function hit() {
+            var gol = document.form1.gol.value;
+            var anak = parseInt(document.form1.anak.value) || 0;
+
+            var gajiPokok = 0;
+            var persenTunjangan = 0;
+
+            if (gol === "I") {
+                gajiPokok = 250000;
+                persenTunjangan = 0.05;
+            } else if (gol === "II") {
+                gajiPokok = 300000;
+                persenTunjangan = 0.10;
+            } else if (gol === "III") {
+                gajiPokok = 350000;
+                persenTunjangan = 0.15;
+            }
+
+            var tunjangan = (anak * gajiPokok) * persenTunjangan;
+            var gajiBersih = gajiPokok + tunjangan;
+
+            document.form1.gapok.value = gajiPokok;
+            document.form1.tunjangan.value = tunjangan;
+            document.form1.gaji.value = gajiBersih;
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+        <table border="1">
+            <tr>
+                <td colspan="2"><h2 style="text-align: center;">PERHITUNGAN GAJI</h2></td>
+            </tr>
+            <tr>
+                <td><label>Golongan:</label></td>
+                <td>
+                    <select name="gol">
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Jumlah Anak:</label></td>
+                <td><input type="text" name="anak" size="10" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" name="hitung" value="Hitung" onclick="hit()">
+                    <input type="reset" name="Batal" value="Cancel">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Gaji Pokok:</label></td>
+                <td><input type="text" name="gapok" readonly></td>
+            </tr>
+            <tr>
+                <td><label>Tunjangan:</label></td>
+                <td><input type="text" name="tunjangan" readonly></td>
+            </tr>
+            <tr>
+                <td><label>Gaji Bersih:</label></td>
+                <td><input type="text" name="gaji" readonly></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

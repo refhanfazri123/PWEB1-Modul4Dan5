@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan</title>
+    <style>
+        body{
+            background-color: silver;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        h1{
+            margin-left: 30px;
+        }
+        td{
+            height: 20px;
+        }
+        #simpanButton{
+            background: blue;
+            color: white;
+            font-weight: bold;
+        }
+        #cancelButton{
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Form Pemesanan</h1>
+        <form id="bookingForm">
+            <table border="0" align="center" >
+                <tr>
+                    <td><label for="idPemesan">Id Pemesan:</label></td>
+                    <td><input type="text" id="idPemesan" name="idPemesan" style="width: 1000px;" disabled value="1"></td>
+                </tr>
+                <tr>
+                    <td><label for="namaPemesan">Nama Pemesan:</label></td>
+                    <td><input type="text" id="namaPemesan" name="namaPemesan" style="width: 1000px;" required></td>
+                </tr>
+                <tr>
+                    <td><label for="nomorIdentitas">Nomor Identitas:</label></td>
+                    <td><input type="text" id="nomorIdentitas" name="nomorIdentitas" style="width: 1000px;" maxlength="16" required></td>
+                </tr>
+                <tr>
+                    <td><label for="tipeKamar">Tipe Kamar:</label></td>
+                    <td>
+                        <select id="tipeKamar" name="tipeKamar" required>
+                            <option value="">--PILIH--</option>
+                            <option value="Standar">Standar</option>
+                            <option value="Deluxe">Deluxe</option>
+                            <option value="Family">Family</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="harga">Harga:</label></td>
+                    <td><input type="text" id="harga" name="harga" style="width: 1000px;" disabled></td>
+                </tr>
+                <tr>
+                    <td><label for="tanggalPesan">Tanggal Pesan:</label></td>
+                    <td><input type="date" id="tanggalPesan" name="tanggalPesan" style="width: 1000px;" required></td>
+                </tr>
+                <tr>
+                    <td><label for="durasiMenginap">Durasi Menginap:</label></td>
+                    <td><input type="number" id="durasiMenginap" name="durasiMenginap" min="1" required> Hari</td>
+                </tr>
+                <tr>
+                    <td><label for="termasukBreakfast">Termasuk Breakfast:</label></td>
+                    <td><input type="checkbox" id="termasukBreakfast" name="termasukBreakfast"> Ya</td>
+                </tr>
+                <tr>
+                    <td><label for="totalBayar">Total Bayar:</label></td>
+                    <td><input type="text" id="totalBayar" name="totalBayar" style="width: 1000px;" disabled></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="button" id="simpanButton" style="padding: 5px;">Simpan</button>
+                        <button type="reset" id="cancelButton" style="padding: 5px;">Batal</button>
+                        
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div id="resume" style="display: none; text-align: center;"></div>
+    </div>
+    <script src="Tugas3.js"></script>
+</body>
+</html>
